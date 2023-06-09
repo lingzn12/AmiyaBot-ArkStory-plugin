@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "githubMirror": {
+      "title": "github镜像地址",
+      "description": "github镜像地址链接，请输入带前缀的链接文本",
+      "type": "string"
+    },
+    "updateStoryRes": {
+      "title": "剧情资源更新关键词",
+      "description": "作用:更新剧情资源文件",
+      "type": "string"
+    },
+    "Page": {
+      "title": "页数",
+      "description": "总页数上限",
+      "type": "number"
+    },
+    "PageWidth": {
+      "title": "图片宽度",
+      "description": "渲染图片宽度",
+      "type": "number"
+    },
+    "PageRender": {
+      "title": "图片渲染时间",
+      "description": "图片渲染时间，单位/秒",
+      "type": "number"
+    },
+    "maxTime": {
+      "title": "对话最长等待时间",
+      "description": "单位/秒",
+      "type": "number"
+    }
+  }
+}

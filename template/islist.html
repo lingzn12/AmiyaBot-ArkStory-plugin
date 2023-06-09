@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <title>list</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+<div id="template">
+    <div class="main">
+        <p v-for="text_value in data.list">
+            <b>{{text_value}}</b>
+        </p>
+    </div>
+    <p>第{{data.page}}页</p>
+</div>
+</body>
+<script src="js/vue.min.js"></script>
+<script>
+    const template = new Vue({
+        el: '#template',
+        methods: {
+            init(data) {
+                this.$set(this, 'data', data)
+            }
+        },
+        data() {
+            return {
+                data: {}
+            }
+        },
+        mounted() {
+            // 暴露 init 方法供核心调用
+            window.init = this.init
+        }
+    })
+
+</script>
+
+</html>
