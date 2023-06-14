@@ -2,12 +2,42 @@ import json
 
 from pathlib import Path
 from typing import List, Dict
+import hashlib
 
-from .constants import STAGE_TABLE
+from .constants import TEXT_DATA
 
 
 class StoryData:
     story_list: dict = {}
+
+
+class HashTool:
+    def __init__(self):
+        self.hash_table = {}
+
+    def add(self, key, value):
+        hash_key = hashlib.sha256(key.encode()).hexdigest()
+        self.hash_table[hash_key] = value
+
+    def get(self, key):
+        hash_key = hashlib.sha256(key.encode()).hexdigest()
+        return self.hash_table.get(hash_key)
+
+    def update(self, key, value):
+        hash_key = hashlib.sha256(key.encode()).hexdigest()
+        if hash_key in self.hash_table:
+            self.hash_table[hash_key] = value
+
+    def remove(self, key):
+        hash_key = hashlib.sha256(key.encode()).hexdigest()
+        if hash_key in self.hash_table:
+            del self.hash_table[hash_key]
+
+    def story_list_hash(self):
+        text_data: dict = read_json(TEXT_DATA)
+
+        for text_data_index, text_data_value in text_data['zh_CN'].items():
+            self.add(text_data_index, text_data_value)
 
 
 def read_txt(filepath: Path, encoding: str = 'utf_8_sig') -> str:
@@ -42,17 +72,17 @@ def write_json(data: dict, filepath: Path, encoding: str = 'utf-8') -> None:
 #         bar.close()
 
 
-def stage_table_data() -> Dict:
-    stage_table = read_json(STAGE_TABLE)
-    for stageValue in stage_table["stages"].values():
-        StoryData.story_list.update({
-            stageValue["stageId"]: {
-                "stageId": stageValue["stageId"],
-                "name": stageValue["name"],
-                "levelId": stageValue["levelId"]
-            }
-        })
-    return StoryData.story_list
+# def stage_table_data() -> Dict:
+#     stage_table = read_json(STAGE_TABLE)
+#     for stageValue in stage_table["stages"].values():
+#         StoryData.story_list.update({
+#             stageValue["stageId"]: {
+#                 "stageId": stageValue["stageId"],
+#                 "name": stageValue["name"],
+#                 "levelId": stageValue["levelId"]
+#             }
+#         })
+#     return StoryData.story_list
 
 
 def file_list_handle(path, sub_dir=False, suffix_list=None) -> List:

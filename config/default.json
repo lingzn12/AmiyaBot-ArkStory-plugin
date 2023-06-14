@@ -4,5 +4,7 @@
   "Page": 5,
   "PageWidth": 450,
   "PageRender": 0.3,
-  "maxTime": 60
+  "maxTime": 60,
+  "maxLevel": 6,
+  "memoryOptimize": false
 }

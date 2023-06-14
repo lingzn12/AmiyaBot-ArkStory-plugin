@@ -1,0 +1,78 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="p-id" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="3.10" />
+            <item index="1" class="java.lang.String" itemvalue="3.11" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="20">
+            <item index="0" class="java.lang.String" itemvalue="requests-html" />
+            <item index="1" class="java.lang.String" itemvalue="dhash" />
+            <item index="2" class="java.lang.String" itemvalue="jieba" />
+            <item index="3" class="java.lang.String" itemvalue="baidu-aip" />
+            <item index="4" class="java.lang.String" itemvalue="attrdict" />
+            <item index="5" class="java.lang.String" itemvalue="srsly" />
+            <item index="6" class="java.lang.String" itemvalue="requests" />
+            <item index="7" class="java.lang.String" itemvalue="jinja2" />
+            <item index="8" class="java.lang.String" itemvalue="pyyaml" />
+            <item index="9" class="java.lang.String" itemvalue="fastapi" />
+            <item index="10" class="java.lang.String" itemvalue="zhon" />
+            <item index="11" class="java.lang.String" itemvalue="selenium" />
+            <item index="12" class="java.lang.String" itemvalue="starlette" />
+            <item index="13" class="java.lang.String" itemvalue="pillow" />
+            <item index="14" class="java.lang.String" itemvalue="lxml" />
+            <item index="15" class="java.lang.String" itemvalue="gitpython" />
+            <item index="16" class="java.lang.String" itemvalue="pypinyin" />
+            <item index="17" class="java.lang.String" itemvalue="amiyabot" />
+            <item index="18" class="java.lang.String" itemvalue="jionlp" />
+            <item index="19" class="java.lang.String" itemvalue="EdgeGPT" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+          <option value="W601" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N803" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="typing.AsyncGenerator.*" />
+          <option value="utils.encryption.Crypto" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
